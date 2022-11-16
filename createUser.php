@@ -19,6 +19,6 @@ if(count($_POST) == 7) {
     }
 
 } else {
-    $response = array("response" => "failed", "error" => "Missing data", "content" => []);
+    $response = array("response" => "failed", "error" => "Missing data from request", "content" => []);
     echo json_encode($response, JSON_PRETTY_PRINT);
 }
