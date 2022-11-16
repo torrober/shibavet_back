@@ -11,5 +11,5 @@ Work in progress.
     <li>Start Apache and MySQL</li>
     <li>Go to localhost/phpmyadmin and create a database called 'shibavet'</li>
     <li>Import the SQL file previously downloaded</li>
-    <li>Navigate to localhost/covid-19-colombia-backend and check if you are connected, if the steps were followed correctly, the text 'Conectado' should appear</li>
+    <li>Navigate to localhost/shibavet_back and check if you are connected, if the steps were followed correctly, the text 'Conectado' should appear</li>
 </ol>
