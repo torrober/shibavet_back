@@ -8,18 +8,23 @@ if(count($_POST) == 2) {
             $response = array("response" => "failed", "error" => mysqli_error($con), "content" => "");
             echo json_encode($response, JSON_PRETTY_PRINT);
         } else {
-            $row = mysqli_fetch_array(mysqli_query($con, $query));
-            $content = array(
+            
+            if (mysqli_num_rows(mysqli_query($con, $query)) > 0) {
+                $row = mysqli_fetch_array(mysqli_query($con, $query));
+                $content = array(
                     "username" => $row['username'],
                     "firstName" => $row['firstName'],
                     "lastName" => $row['lastName'],
                     "userType" => $row['userType'],
                     "id" => $row["id"],
                     "bday" => $row["birthDay"]
-            );
-            $response = array("response" => "ok", "error" => "null", "content" => $content);
-            echo json_encode($response, JSON_PRETTY_PRINT);
-            //echo json_encode(mysqli_fetch_array(mysqli_query($con, $query)));
+                );
+                $response = array("response" => "ok", "error" => "null", "content" => $content);
+                echo json_encode($response, JSON_PRETTY_PRINT);
+            } else {
+                $response = array("response" => "failed", "error" => "User does not exist", "content" => "");
+                echo json_encode($response, JSON_PRETTY_PRINT);
+            }
         }
     } catch(Exception $e) {
         $response = array("response" => "failed", "error" => $e->getMessage(), "content" => "");
