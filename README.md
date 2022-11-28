@@ -5,7 +5,7 @@ Work in progress.
 
 # Installation guide
 <ol>
-    <li>Download the SQL file from Google Drive <a href="https://drive.google.com/file/d/1sClwpExvcfgliRV5tqFeNfVs2yBwln9J/view?usp=sharing">HERE</a></li>
+    <li>Download the SQL file from Google Drive <a href="https://drive.google.com/file/d/1f75cUqbLLWuwQpJ1XqV7Dt1nc_y1edRG/view?usp=share_link">HERE</a></li>
     <li>Download and install XAMPP and clone this repository under the htdocs folder</li>
     <li>Open XAMPP</li>
     <li>Start Apache and MySQL</li>
