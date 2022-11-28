@@ -3,7 +3,7 @@ include('connection.php');
 include('headers.php');
 if ($_POST['userType'] == '2' || $_POST['userType'] == '3') {
     //code for inserting pet
-    $query = "SELECT * from pets";
+    $query = "SELECT * from services";
     $result = mysqli_query($con, $query);
     $content = array();
     try {
@@ -21,7 +21,7 @@ if ($_POST['userType'] == '2' || $_POST['userType'] == '3') {
                 }
                 $response = array("response" => "ok", "error" => "", "content" => $content);
             } else {
-                $response = array("response" => "failed", "error" => "Owner has no pets", "content" => "");
+                $response = array("response" => "failed", "error" => "no services", "content" => "");
             }
             echo json_encode($response, JSON_PRETTY_PRINT);
         }
